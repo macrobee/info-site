@@ -12,8 +12,8 @@
     <ul>
       <% for (let datum of data){ %>
       <li>
-        <%= datum.info %> <%= datum.date %>
-        <a href="/<%=datum.id%>/edit">Edit</a>
+        <%= datum.info %> <%= datum.date.getMonth() %>
+        <a href="/<%=datum.id%>/edit">Edit</a> <a href="/<%=datum.id%>/view">View</a>
       </li>
       <%} %>
     </ul>

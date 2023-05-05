@@ -7,11 +7,16 @@
     <title>View comments on info</title>
   </head>
   <body>
-    <h1>Info post <%= data.id %></h1>
+    <h1>Info post <%= data._id %></h1>
     <h2><%= data.info %></h2>
     <% for (let comment of data.comments){ %>
     <p><%= comment %></p>
     <% }%>
+    <h2>Add comment</h2>
+    <form action="/<%=data._id%>/view" method="POST">
+      <input type="text" name="newComment" id="newComment">
+      <button type="submit">Add</button>
+    </form>
     <a href="/">Back to main</a>
     
   </body>
